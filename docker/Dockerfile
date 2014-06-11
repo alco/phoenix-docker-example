@@ -1,5 +1,5 @@
 FROM alco/ubuntu-elixir:v0.13.3
-MAINTAINER Alexei Sholik <idont@maintain.it>
+MAINTAINER Alexei Sholik <i.dont.really@maintain.it>
 
 ## Prerequisites ##
 
