@@ -16,6 +16,11 @@ The build process works as follows:
   * clone this repo to `docker/webexample`
   * build a docker image named `webexample` using `docker/` as the context
 
+**Caveat**: there is currently one unresolved problem with getting mix
+dependecies to build as part of the image build process. If you are getting
+build errors, run `MIX_ENV=prod mix deps.compile` once inside
+`docker/webexample` on your _host machine_.
+
 If you are running docker inside a VM, you may need to perform a few additional
 steps manually. One of them is adding a port forwarding rule in the VM settings
 to map a port from the VM to the host OS.
