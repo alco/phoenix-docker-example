@@ -36,7 +36,8 @@ RUN mix compile
 ## Set up running environment ##
 
 # If you're running docker in a VM (for instance, if you're on OS X), you'll
-# have to add a port forwarding rule for this port in the VM settings
+# have to add a port forwarding rule for this port in the VM settings to make
+# it available on the host OS
 ENV PORT 8001
 
 # Could have set ENTRYPOINT here, but I couldn't not override it from command
@@ -45,5 +46,5 @@ ENV PORT 8001
 
 # We don't use 'mix phoenix.start' here because we need to pass additional
 # options to the run task
-CMD ["mix", "run", "-e", "Phoenix.Project.module_root.Router.start", \
+CMD ["mix", "run", "-e", "Webexample.Router.start", \
                                 "--no-deps-check", "--no-compile", "--no-halt"]

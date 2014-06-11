@@ -3,7 +3,7 @@
 all: docker
 
 docker: docker/webexample
-	cd $< && git pull && mix deps.get
+	cd $< && git pull --rebase && mix deps.get
 	docker build -t webexample docker/
 
 docker/webexample:
